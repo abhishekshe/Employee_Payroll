@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Employee Payroll form</title>
+    <link rel="stylesheet" href="C:\Users\abhis\OneDrive\Desktop\DAY45\css\new_payroll_form.css">
+    <script></script>
+</head>
+<body>
+    
+    <header class= "header-content header">
+        <div class="logo-content">
+            <img src="../assets/images/logo.png" alt= "logo image">
+            <div>
+                <span class= "emp-text">EMPLOYEE</span><br>
+                <span class="emp-text emp-payroll">PAYROLL</span>
+            </div>
+        </div>
+    </header>
+   
+    <div class="form-content">
+        <form class= "form" action="#" onsubmit="save()" onreset="resetForm()">
+            <div class="form-head">Employee Payroll form</div>
+            <div class="row-content">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id ="name" name="name" placeholder="Your Name" required>
+                <error-output class= "name-error" for="name"></error-output>   
+            </div>
+          
+            <div class="row-content">
+                <label class="label text" for="profile">Profile image</label>
+                <div class= "profile-radio-content">
+                    <label>
+                        <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -3.png" required>
+                        <img class="profile" id="image1" src="../assets/profile-images/Ellipse -3.png">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile2" name="profile" value="../assets/profile-images/Ellipse 1.png" required>
+                        <img class="profile" id="image2" src="../assets/profile-images/Ellipse 1.png">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -8.png" required>
+                        <img class="profile" id="image3" src="../assets/profile-images/Ellipse -8.png">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png" required>
+                        <img class="profile" id="image4" src="../assets/profile-images/Ellipse -7.png">
+                    </label>  
+                </div>
+            </div>
+            
+            <div class="row-content">
+                <label class="label text" for="gender">Gender</label> 
+                <div> 
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label class="text" for="male">Male</label> 
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label class="text" for="female">Female</label> 
+                </div> 
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <div> 
+                    <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
+                    <label class="text" for="hr">HR</label> 
+                    <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
+                    <label class="text" for="sales">Sales</label>
+                    <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
+                    <label class="text" for="finance">Finance</label> 
+                    <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer"> 
+                    <label class="text" for="engineer">Engineer</label> 
+                    <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
+                    <label class="text" for="others">Others</label>
+                </div> 
+            </div>
+            <div class="row-content"> 
+                <label class="label text" for="salary">Choose your salary: </label> 
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="450000">
+                <output class="salary-output text" for="salary">350000</output> 
+            </div> 
+            <!--UC 5 adding date-->
+            <div class="row-content">
+                <label class="label text" for="startDate">Start Date </label>
+            <div> 
+               <select id="day" name="Day">
+                <option value="1" selected>1</option> 
+                <option value="2">2</option>
+                <option value="3">3</option> 
+                <option value="4">4</option> 
+                <option value="5">5</option> 
+                <option value="6">6</option> 
+                <option value="7">7</option> 
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option> 
+                <option value="16">16</option> 
+                <option value="17">17</option> 
+                <option value="18">18</option> 
+                <option value="19">19</option> 
+                <option value="20">20</option> 
+                <option value="21">21</option> 
+                <option value="22">22</option> 
+                <option value="23">23</option> 
+                <option value="24">24</option> 
+                <option value="25">25</option> 
+                <option value="26">26</option> 
+                <option value="27">27</option> 
+                <option value="28">28</option> 
+                <option value="29">29</option> 
+                <option value="30">30</option> 
+                <option value="31">31</option> 
+               </select>
+               
+               <select id="month" name="Month">
+                <option value="January" selected>January</option>
+                <option value="February">Febuary</option>
+                <option value="March">March</option>
+                <option value="April">April</option> 
+                <option value="May">May</option>
+                <option value="June">June</option> 
+                <option value="July">July</option> 
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option> 
+                <option value="December">December</option>
+               </select>
+                <select id="year" name="Year">
+                    <option value="2021">2021</option>
+                    <option value="2020 ">2020</option>
+                    <option valne="2019">2019</option>
+                    <option value="2018">2018</option> 
+                    <option value="2017">2017</option> 
+                    <option value="2016" selected>2016</option> 
+               </select>
+            </div>
+            <error-output class= "date-error"></error-output>   
+         </div>
+      
+        <div class="row-content">
+            <label class="label text" for ="Notes" >Notes</label>
+            <textarea id="notes" name="Notes" class="input" placeholder="" stye="height:100px"></textarea>
+        </div> 
+        <div class="button-content">
+            <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
+            <div class="submit-reset">
+                <button type="submit" class="submitButton button" id="submitButton">Submit</button>
+                <button type="reset" class="resetButton button" onClick="resetForm()">Reset</button>
+            </div>
+        </div> 
+    </form>
+    </div>
+    <script src="C:\Users\abhis\OneDrive\Desktop\DAY45\js\new_payroll_form.js"></script>
+    <script src="C:\Users\abhis\OneDrive\Desktop\DAY45\js\empPayroll.js"></script>
+    
+</body>
+</html>
